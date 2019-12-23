@@ -19,8 +19,8 @@
               <input type="text" class="form-control" id="milhas" placeholder="Milhas">
             </div>
             <div class="form-group">
-                <label for="metros">Metros</label>
-                <input type="text" class="form-control" id="metros" placeholder="Metros">
+                <label for="metros">Distância em metros</label>
+                <input disabled type="text" class="form-control" id="metros" placeholder="Metros">
               </div>
             <button type="button" id="calc" class="btn btn-primary">Converter</button>
           </form>
@@ -34,8 +34,13 @@
             $(function() {
                 $('#calc').click(function() {
                     const milhas = parseFloat($('#milhas').val())
-                    const metros = 1609.34 * milhas
-                    $('#metros').val(metros)
+                    
+                    if (milhas && milhas > 0) {
+                        const metros = 1609.34 * milhas
+                        $('#metros').val(metros)
+                    } else {
+                        alert('O valor de milhas deve ser maior que zero')
+                    }
                 })
             })
         </script>
