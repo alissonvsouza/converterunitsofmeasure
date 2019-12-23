@@ -1,0 +1,15 @@
+{
+  "name": "projetos",
+  "version": "1.0.0",
+  "description": "Converter units of measure",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index"
+  },
+  "author": "Alisson V. de Souza",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
